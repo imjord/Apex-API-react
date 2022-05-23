@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+.header {
+    background-color: darkred;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.header ul li {
+    display: inline;
+    padding: 20px;
+    
+
+}
+
+.header ul li #a {
+    display: inline;
+    padding: 23px;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.current #a:hover {
+    color: darkred;
+    background-color: white;
+    
+}

@@ -1,13 +1,17 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-const Information = (props) => {
-    console.log(props)
+const Information = ({items, loading}) => {
+    console.log(items)
+    // const[timer, setTimer] = useState(items.remainingTimer);
+    // let date = Date.now();
+    // console.log(date)
 
-  return props.Loading ? (<h1>Loading!</h1>) : (
+
+  return loading ? (<h1>Loading!</h1>) : (
       <section>
-          {props.items.map(item => (
-              <p>{item.current.map}</p>
-          ))}
+          <h1>Current Map</h1>
+        <p>{items.map}</p>
+        <img height="250px" width="450px" src={items.asset} alt="img"/>
       </section>
   )
 }

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import Header from './Header';
 import Information from './Information';
+import {Link} from 'react-router-dom';
+import './App.css';
 
 // api 2e705f73-319e-443d-87b0-4beae925b142
 
@@ -12,17 +14,20 @@ const App = () => {
     useEffect(() => {
         const fetchItems = async () => {
             const getItem = await axios(`https://api.mozambiquehe.re/maprotation?auth=${KEY}`);
-            console.log(getItem.data)
-            setItems(getItem.data);
+            setItems(getItem.data.current);
+            // setItems(getItem.data.items);
             setLoading(false);
         }
         fetchItems();
     }, [])
   return (
-    <div>
+    
+      <div>
       <Header />
       <Information items={items} loading={loading} />
     </div>
+ 
+  
   )
 }
 
